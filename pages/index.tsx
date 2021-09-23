@@ -1,7 +1,9 @@
 import type { NextPage } from 'next';
+import NewsList from '../components/NewsList/NewsList';
+import { news } from '../data';
 
 const Home: NextPage = () => {
-	return <h1>sdfgsdfgsgs s s sg sg s</h1>;
+	return <NewsList news={news} />;
 };
 
 export default Home;

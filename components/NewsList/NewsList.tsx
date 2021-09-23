@@ -1,37 +1,22 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import news from '../../data.json';
-
-
-// type News = {
-//   id: number;
-//   title: string;
-//   description: string;
-//   url: Array<string>;
-// }
+import NewsCard from '../NewsCard/NewsCard';
 
 const Wrapper = styled.section`
-  display: flex;
-  gap: 2rem;
-  justify-content: left;
-  flex-wrap: wrap;
+	display: flex;
+	gap: 2rem;
+	justify-content: left;
+	flex-wrap: wrap;
 `;
 
-const NewsList = () => {
+const NewsList = ({ news }) => {
+	return (
+		<Wrapper>
+			{news.map((n) => (
+				<NewsCard key={n.id} {...n} />
+			))}
+		</Wrapper>
+	);
+};
 
-  console.log(news);
-  
-  // useEffect(() => {
-    
-
-  // }, [])
-
-  return (
-    <Wrapper>
-      
-      
-    </Wrapper>
-  )
-}
-
-export default NewsList
+export default NewsList;
