@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
 import NewsList from '../components/NewsList/NewsList';
-import { news } from '../data';
+import { news, NewsProps } from '../data';
 
-const Home: NextPage = () => {
+const Home: NextPage<NewsProps> = () => {
 	return <NewsList news={news} />;
 };
 
