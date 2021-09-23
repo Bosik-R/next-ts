@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import NewsCard from '../NewsCard/NewsCard';
-import {NewsProps} from '../../data'
+import { NewsProps } from '../../data';
 
 const Wrapper = styled.section`
 	display: flex;

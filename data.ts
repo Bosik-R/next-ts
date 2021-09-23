@@ -1,19 +1,18 @@
 export interface SingleNewsObjectProps {
-	id: number;
+	id: string;
 	title: string;
 	image: string;
 	description: string;
 	url: string[];
-};
+}
 
-export interface NewsProps{
-	news: Array<SingleNewsObjectProps> 
-};
+export interface NewsProps {
+	testNews: Array<SingleNewsObjectProps>;
+}
 
-
-export const news = [
+export const testNews = [
 	{
-		id: 1,
+		id: '1',
 		title: 'next.js and typescript does it work?',
 		author: 'John Doe',
 		image: './images/news-1.jpg',
@@ -22,7 +21,7 @@ export const news = [
 		url: ['https://blog.logrocket.com/using-next-js-with-typescript/', 'https://nextjs.org/docs/basic-features/typescript'],
 	},
 	{
-		id: 2,
+		id: '2',
 		title: 'next.js and typescript does it work?',
 		author: 'John Doe',
 		image: './images/news-5.jpg',
@@ -31,7 +30,7 @@ export const news = [
 		url: ['https://blog.logrocket.com/using-next-js-with-typescript/', 'https://nextjs.org/docs/basic-features/typescript'],
 	},
 	{
-		id: 3,
+		id: '3',
 		title: 'next.js and typescript does it work?',
 		author: 'John Doe',
 		image: './images/news-6.jpg',
@@ -40,7 +39,7 @@ export const news = [
 		url: ['https://blog.logrocket.com/using-next-js-with-typescript/', 'https://nextjs.org/docs/basic-features/typescript'],
 	},
 	{
-		id: 4,
+		id: '4',
 		title: 'next.js and typescript does it work?',
 		author: 'John Doe',
 		image: './images/news-1.jpg',
@@ -49,7 +48,7 @@ export const news = [
 		url: ['https://blog.logrocket.com/using-next-js-with-typescript/', 'https://nextjs.org/docs/basic-features/typescript'],
 	},
 	{
-		id: 5,
+		id: '5',
 		title: 'next.js and typescript does it work?',
 		author: 'John Doe',
 		image: './images/news-2.jpg',
@@ -58,7 +57,7 @@ export const news = [
 		url: ['https://blog.logrocket.com/using-next-js-with-typescript/', 'https://nextjs.org/docs/basic-features/typescript'],
 	},
 	{
-		id: 6,
+		id: '6',
 		title: 'next.js and typescript does it work?',
 		author: 'John Doe',
 		image: './images/news-3.jpg',
@@ -67,7 +66,7 @@ export const news = [
 		url: ['https://blog.logrocket.com/using-next-js-with-typescript/', 'https://nextjs.org/docs/basic-features/typescript'],
 	},
 	{
-		id: 7,
+		id: '7',
 		title: 'next.js and typescript does it work?',
 		author: 'John Doe',
 		image: './images/news-4.jpg',
@@ -76,7 +75,7 @@ export const news = [
 		url: ['https://blog.logrocket.com/using-next-js-with-typescript/', 'https://nextjs.org/docs/basic-features/typescript'],
 	},
 	{
-		id: 8,
+		id: '8',
 		title: 'next.js and typescript does it work?',
 		author: 'John Doe',
 		image: './images/news-5.jpg',
@@ -85,7 +84,7 @@ export const news = [
 		url: ['https://blog.logrocket.com/using-next-js-with-typescript/', 'https://nextjs.org/docs/basic-features/typescript'],
 	},
 	{
-		id: 9,
+		id: '9',
 		title: 'next.js and typescript does it work?',
 		author: 'John Doe',
 		image: './images/news-6.jpg',
