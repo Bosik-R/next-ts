@@ -7,11 +7,12 @@ export const Wrapper = styled.div`
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
-	border: 1px solid #000c77;
+	border: none;
 	border-radius: 10px;
 	background-color: #ffffff;
 	cursor: pointer;
-	`;
+	box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.43);
+`;
 
 export const Image = styled.img`
 	max-width: 26rem;
@@ -26,8 +27,7 @@ export const Image = styled.img`
 export const Title = styled.p`
 	font-size: 1.2rem;
 
-		@media (max-width: 430px) {
-			font-size: 1rem;
+	@media (max-width: 430px) {
+		font-size: 1rem;
 	}
-
 `;
