@@ -1,13 +1,14 @@
 export interface SingleNewsObjectProps {
 	id: string;
+	author?: string;
 	title: string;
 	image: string;
 	description: string;
-	url: string[];
+	url: string;
 }
 
 export interface NewsProps {
-	testNews: Array<SingleNewsObjectProps>;
+	news: Array<SingleNewsObjectProps>;
 }
 
 export const testNews = [
@@ -15,81 +16,81 @@ export const testNews = [
 		id: '1',
 		title: 'next.js and typescript does it work?',
 		author: 'John Doe',
-		image: './images/news-1.jpg',
+		image: '/images/news-1.jpg',
 		description:
 			'TypeScript and Next.js are a match made in heaven. Next’s features make building full-stack React apps easier than ever, and TypeScript’s type system helps you catch errors during development. Using types in TypeScript is optional because a valid JavaScript code is also valid TypeScript code, the TypeScript compiler infers the types for your variables and functions.',
-		url: ['https://blog.logrocket.com/using-next-js-with-typescript/', 'https://nextjs.org/docs/basic-features/typescript'],
+		url: 'https://blog.logrocket.com/using-next-js-with-typescript/',
 	},
 	{
 		id: '2',
 		title: 'next.js and typescript does it work?',
 		author: 'John Doe',
-		image: './images/news-5.jpg',
+		image: '/images/news-5.jpg',
 		description:
 			'TypeScript and Next.js are a match made in heaven. Next’s features make building full-stack React apps easier than ever, and TypeScript’s type system helps you catch errors during development. Using types in TypeScript is optional because a valid JavaScript code is also valid TypeScript code, the TypeScript compiler infers the types for your variables and functions.',
-		url: ['https://blog.logrocket.com/using-next-js-with-typescript/', 'https://nextjs.org/docs/basic-features/typescript'],
+		url: 'https://blog.logrocket.com/using-next-js-with-typescript/',
 	},
 	{
 		id: '3',
 		title: 'next.js and typescript does it work?',
 		author: 'John Doe',
-		image: './images/news-6.jpg',
+		image: '/images/news-6.jpg',
 		description:
 			'TypeScript and Next.js are a match made in heaven. Next’s features make building full-stack React apps easier than ever, and TypeScript’s type system helps you catch errors during development. Using types in TypeScript is optional because a valid JavaScript code is also valid TypeScript code, the TypeScript compiler infers the types for your variables and functions.',
-		url: ['https://blog.logrocket.com/using-next-js-with-typescript/', 'https://nextjs.org/docs/basic-features/typescript'],
+		url: 'https://blog.logrocket.com/using-next-js-with-typescript/',
 	},
 	{
 		id: '4',
 		title: 'next.js and typescript does it work?',
 		author: 'John Doe',
-		image: './images/news-1.jpg',
+		image: '/images/news-1.jpg',
 		description:
 			'TypeScript and Next.js are a match made in heaven. Next’s features make building full-stack React apps easier than ever, and TypeScript’s type system helps you catch errors during development. Using types in TypeScript is optional because a valid JavaScript code is also valid TypeScript code, the TypeScript compiler infers the types for your variables and functions.',
-		url: ['https://blog.logrocket.com/using-next-js-with-typescript/', 'https://nextjs.org/docs/basic-features/typescript'],
+		url: 'https://blog.logrocket.com/using-next-js-with-typescript/',
 	},
 	{
 		id: '5',
 		title: 'next.js and typescript does it work?',
 		author: 'John Doe',
-		image: './images/news-2.jpg',
+		image: '/images/news-2.jpg',
 		description:
 			'TypeScript and Next.js are a match made in heaven. Next’s features make building full-stack React apps easier than ever, and TypeScript’s type system helps you catch errors during development. Using types in TypeScript is optional because a valid JavaScript code is also valid TypeScript code, the TypeScript compiler infers the types for your variables and functions.',
-		url: ['https://blog.logrocket.com/using-next-js-with-typescript/', 'https://nextjs.org/docs/basic-features/typescript'],
+		url: 'https://blog.logrocket.com/using-next-js-with-typescript/',
 	},
 	{
 		id: '6',
 		title: 'next.js and typescript does it work?',
 		author: 'John Doe',
-		image: './images/news-3.jpg',
+		image: '/images/news-3.jpg',
 		description:
 			'TypeScript and Next.js are a match made in heaven. Next’s features make building full-stack React apps easier than ever, and TypeScript’s type system helps you catch errors during development. Using types in TypeScript is optional because a valid JavaScript code is also valid TypeScript code, the TypeScript compiler infers the types for your variables and functions.',
-		url: ['https://blog.logrocket.com/using-next-js-with-typescript/', 'https://nextjs.org/docs/basic-features/typescript'],
+		url: 'https://blog.logrocket.com/using-next-js-with-typescript/',
 	},
 	{
 		id: '7',
 		title: 'next.js and typescript does it work?',
 		author: 'John Doe',
-		image: './images/news-4.jpg',
+		image: '/images/news-4.jpg',
 		description:
 			'TypeScript and Next.js are a match made in heaven. Next’s features make building full-stack React apps easier than ever, and TypeScript’s type system helps you catch errors during development. Using types in TypeScript is optional because a valid JavaScript code is also valid TypeScript code, the TypeScript compiler infers the types for your variables and functions.',
-		url: ['https://blog.logrocket.com/using-next-js-with-typescript/', 'https://nextjs.org/docs/basic-features/typescript'],
+		url: 'https://blog.logrocket.com/using-next-js-with-typescript/',
 	},
 	{
 		id: '8',
 		title: 'next.js and typescript does it work?',
 		author: 'John Doe',
-		image: './images/news-5.jpg',
+		image: '/images/news-5.jpg',
 		description:
 			'TypeScript and Next.js are a match made in heaven. Next’s features make building full-stack React apps easier than ever, and TypeScript’s type system helps you catch errors during development. Using types in TypeScript is optional because a valid JavaScript code is also valid TypeScript code, the TypeScript compiler infers the types for your variables and functions.',
-		url: ['https://blog.logrocket.com/using-next-js-with-typescript/', 'https://nextjs.org/docs/basic-features/typescript'],
+		url: 'https://blog.logrocket.com/using-next-js-with-typescript/',
 	},
 	{
 		id: '9',
 		title: 'next.js and typescript does it work?',
 		author: 'John Doe',
-		image: './images/news-6.jpg',
+		image: '/images/news-6.jpg',
 		description:
 			'TypeScript and Next.js are a match made in heaven. Next’s features make building full-stack React apps easier than ever, and TypeScript’s type system helps you catch errors during development. Using types in TypeScript is optional because a valid JavaScript code is also valid TypeScript code, the TypeScript compiler infers the types for your variables and functions.',
-		url: ['https://blog.logrocket.com/using-next-js-with-typescript/', 'https://nextjs.org/docs/basic-features/typescript'],
+		url: 'https://blog.logrocket.com/using-next-js-with-typescript/',
 	},
 ];
