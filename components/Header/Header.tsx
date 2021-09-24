@@ -15,8 +15,6 @@ const Header = () => {
 		title = filtered[0].title
 	}
 	
-	
-
 	return (
 		<S.Wrapper>
 			<S.Title>DevNews the best source of information</S.Title>

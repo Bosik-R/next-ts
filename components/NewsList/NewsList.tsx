@@ -13,8 +13,8 @@ const Wrapper = styled.section`
 const NewsList: React.FC<NewsProps> = ({ news }) => {
 	return (
 		<Wrapper>
-			{news.map((n) => (
-				<NewsCard key={n.id} {...n} />
+			{news.map((data) => (
+				<NewsCard key={data.id} {...data} />
 			))}
 		</Wrapper>
 	);
