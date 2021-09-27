@@ -12,8 +12,10 @@ const NewsCard: React.FC<SingleNewsObjectProps> = ({ id, title, image }) => {
 
 	return (
 		<S.Wrapper onClick={showNewsDetails}>
-			<S.Image src={image} alt={title} />
 			<S.Title>{title}</S.Title>
+			<S.ImageWrapper>
+				<S.Image src={image} alt={title} />
+			</S.ImageWrapper>
 		</S.Wrapper>
 	);
 };

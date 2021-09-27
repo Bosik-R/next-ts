@@ -8,4 +8,5 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
 	width: 90%;
 	margin: 0 auto;
+	padding-top: 2rem;
 `;

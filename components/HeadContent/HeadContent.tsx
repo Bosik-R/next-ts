@@ -6,7 +6,7 @@ const HeadContent: React.FC = () => {
 		<Head>
 			<title>DevNews</title>
 			<meta name='description' content='News for developers' />
-			<link rel='icon' href='/favicon.ico' />
+			<link rel='icon' href='/favicon/favicon.ico' />
 		</Head>
 	);
 };

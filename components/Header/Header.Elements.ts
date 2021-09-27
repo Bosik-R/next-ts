@@ -13,22 +13,21 @@ export const Wrapper = styled.header`
 export const Title = styled.h1`
 	text-align: center;
 
-	@media (max-width: 430px){
+	@media (max-width: 430px) {
 		font-size: 1.5rem;
 		line-height: 1.5rem;
 	}
-
 `;
 
 export const Navigation = styled.nav`
 	display: flex;
-	align-items: baseline;
+	align-items: center;
 	font-size: 1.5rem;
 	line-height: 1.5rem;
 	padding: 0;
 	margin: 0;
 
-	@media (max-width: 430px){
+	@media (max-width: 430px) {
 		font-size: 1rem;
 		line-height: 1rem;
 	}
@@ -36,6 +35,7 @@ export const Navigation = styled.nav`
 
 export const HomeLink = styled.a`
 	margin-right: 0.75rem;
+	margin-bottom: 5px;
 
 	&:hover {
 		color: #00d70b;
@@ -44,6 +44,10 @@ export const HomeLink = styled.a`
 
 export const ChevronIcon = styled(ChevronRight)`
 	height: 1.2rem;
+
+	@media (max-width: 430px) {
+		height: 1rem;
+	}
 `;
 
 export const ArticleTitle = styled.span`

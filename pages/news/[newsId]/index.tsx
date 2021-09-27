@@ -2,11 +2,14 @@ import type { NextPage } from 'next';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import NewsDetailsCard from '../../../components/NewsDetailsCard/NewsDetailsCard';
-import { NewsProps, testNews } from '../../../data';
+import { SingleNewsObjectProps, testNews } from '../../../data';
 
-const NewsDetails: NextPage<NewsProps> = (props) => {
-	
-	return <NewsDetailsCard news={props.news}/>;
+interface Props {
+	news: SingleNewsObjectProps;
+}
+
+const NewsDetails: NextPage<Props> = (props) => {
+	return <NewsDetailsCard news={props.news} />;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -21,14 +24,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
 interface Params extends ParsedUrlQuery {
 	newsId: string;
 }
+
 export const getStaticProps: GetStaticProps = async (context) => {
 	const paramsId = context.params as Params;
 
-	const newsData = testNews.filter(news => news.id === paramsId.newsId);
+	const newsData = testNews.filter((news) => news.id === paramsId.newsId);
 
 	return {
 		props: {
-			news: {...newsData[0]}
+			news: { ...newsData[0] },
 		},
 	};
 };

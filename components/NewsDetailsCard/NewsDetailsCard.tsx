@@ -1,21 +1,32 @@
-import React from 'react'
-import { Props } from '../../pages/news/[newsId]'
+import React from 'react';
+import { SingleNewsObjectProps } from '../../data';
 import * as S from './NewsDetailsCard.Elements';
 
-const NewsDetailsCard: React.FC<Props> = ({newsData}) => {
-  const { title, image, description, url} = newsData;
-
-  return (
-    <S.Wrapper>
-      <S.Title>{title}</S.Title>
-      <S.DetailsImage src={image} alt={title}/>
-      <S.Content>{description}</S.Content>
-      <S.LinkWrapper>
-        <S.LinkText>original text:</S.LinkText>
-        <S.Link href={url}>{url}</S.Link>
-      </S.LinkWrapper>
-    </S.Wrapper>
-  )
+interface Props {
+	news: SingleNewsObjectProps;
 }
+const NewsDetailsCard: React.FC<Props> = ({ news }) => {
+	const { title, image, description, url, author } = news;
+
+	return (
+		<S.Wrapper>
+			<S.Title>{title}</S.Title>
+			<S.ContentWrapper>
+				<S.ContentCard>
+					<S.DetailsImage src={image} alt={title} />
+				</S.ContentCard>
+				<S.ContentCard>
+					<S.Description>{description}</S.Description>
+					<S.LinkWrapper>
+						<S.Author>author: {author}</S.Author>
+						<S.IconLeft />
+						<S.Link href={url}>original article</S.Link>
+						<S.IconRight />
+					</S.LinkWrapper>
+				</S.ContentCard>
+			</S.ContentWrapper>
+		</S.Wrapper>
+	);
+};
 
 export default NewsDetailsCard;

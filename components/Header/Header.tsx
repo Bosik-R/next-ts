@@ -11,10 +11,10 @@ const Header = () => {
 	let title = '';
 
 	if (artId) {
-		const filtered = testNews.filter(news => news.id === artId.toString());
-		title = filtered[0].title
+		const filtered = testNews.filter((news) => news.id === artId.toString());
+		title = filtered[0].title;
 	}
-	
+
 	return (
 		<S.Wrapper>
 			<S.Title>DevNews the best source of information</S.Title>
