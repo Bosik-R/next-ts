@@ -8,12 +8,12 @@ const Header = () => {
 	const router = useRouter();
 	const artId = router.query.newsId;
 
-	let title = '';
+	// let title = '';
 
-	if (artId) {
-		const filtered = testNews.filter((news) => news.id === artId.toString());
-		title = filtered[0].title;
-	}
+	// if (artId) {
+	// 	const filtered = testNews.filter((news) => news.id === artId.toString());
+	// 	title = filtered[0].title;
+	// }
 
 	return (
 		<S.Wrapper>
@@ -23,7 +23,7 @@ const Header = () => {
 					<S.HomeLink>News</S.HomeLink>
 				</Link>
 				<S.ChevronIcon />
-				<S.ArticleTitle>{artId ? title : ''}</S.ArticleTitle>
+				<S.ArticleTitle>{'title'}</S.ArticleTitle>
 			</S.Navigation>
 		</S.Wrapper>
 	);

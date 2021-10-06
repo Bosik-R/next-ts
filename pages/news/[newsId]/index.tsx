@@ -3,21 +3,30 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import NewsDetailsCard from '../../../components/NewsDetailsCard/NewsDetailsCard';
 import { SingleNewsObjectProps, testNews } from '../../../data';
+import { MongoClient, ObjectId } from 'mongodb';
 
 interface Props {
-	news: SingleNewsObjectProps;
+	singleNews: SingleNewsObjectProps;
 }
 
-const NewsDetails: NextPage<Props> = (props) => {
-	return <NewsDetailsCard news={props.news} />;
+const NewsDetails: NextPage<Props> = ({ singleNews }) => {
+	console.log(singleNews);
+	return <div>hello</div>;
+	//return <NewsDetailsCard singleNews={singleNews} />;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
+	const client = await MongoClient.connect(`mongodb+srv://devNews:devNewsPassword@next-ts.ilfar.mongodb.net/devnews?retryWrites=true&w=majority`);
+	const db = client.db();
+	const newsCollection = db.collection('news');
+	const news = await newsCollection.find().toArray();
+	const mapedNews = news.map((n) => {
+		return { params: { newsId: n._id.toString() } };
+	});
+
 	return {
 		fallback: false,
-		paths: testNews.map((page) => {
-			return { params: { newsId: page.id } };
-		}),
+		paths: mapedNews,
 	};
 };
 
@@ -28,11 +37,15 @@ interface Params extends ParsedUrlQuery {
 export const getStaticProps: GetStaticProps = async (context) => {
 	const paramsId = context.params as Params;
 
-	const newsData = testNews.filter((news) => news.id === paramsId.newsId);
+	const client = await MongoClient.connect(`mongodb+srv://devNews:devNewsPassword@next-ts.ilfar.mongodb.net/devnews?retryWrites=true&w=majority`);
+	const db = client.db();
+	const newsCollection = db.collection('news');
+	const singleNews = await newsCollection.findOne({ _id: new ObjectId(paramsId.newsId) });
+	console.log('getStaticProps', singleNews);
 
 	return {
 		props: {
-			news: { ...newsData[0] },
+			singleNews: { ...singleNews },
 		},
 	};
 };
