@@ -2,17 +2,13 @@ import React from 'react';
 import * as S from './Header.Elements';
 import Link from 'next/link';
 import { useRouter } from 'next/dist/client/router';
+import { useGlobalContext, GlobalContextProps } from '../../contextAPI/globalContext';
 
-const Header = () => {
+const Header: React.FC<GlobalContextProps> = () => {
+	const { singleNewsContext } = useGlobalContext();
 	const router = useRouter();
 	const artId = router.query.newsId;
-
-	// let title = '';
-
-	// if (artId) {
-	// 	const filtered = testNews.filter((news) => news.id === artId.toString());
-	// 	title = filtered[0].title;
-	// }
+	console.log(artId);
 
 	return (
 		<S.Wrapper>
@@ -22,7 +18,7 @@ const Header = () => {
 					<S.HomeLink>News</S.HomeLink>
 				</Link>
 				<S.ChevronIcon />
-				<S.ArticleTitle>{'title'}</S.ArticleTitle>
+				<S.ArticleTitle>{singleNewsContext.title}</S.ArticleTitle>
 			</S.Navigation>
 		</S.Wrapper>
 	);
