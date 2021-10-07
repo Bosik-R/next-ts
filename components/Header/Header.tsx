@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/dist/client/router';
 import { useGlobalContext, GlobalContextProps } from '../../contextAPI/globalContext';
 
-const Header: React.FC<GlobalContextProps> = () => {
+const Header: React.FC = () => {
 	const { singleNewsContext } = useGlobalContext();
 	const router = useRouter();
 	const artId = router.query.newsId;
