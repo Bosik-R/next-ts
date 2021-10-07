@@ -12,6 +12,10 @@ export const Wrapper = styled.article`
 `;
 
 export const Title = styled.h2`
+	padding: 0.7rem;
+	margin-bottom: 3rem;
+	border-bottom: 0.2rem solid #140051;
+
 	@media (max-width: 768px) {
 		font-size: 1.2rem;
 	}

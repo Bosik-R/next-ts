@@ -1,5 +1,5 @@
 export interface SingleNewsObjectProps {
-	id: string;
+	_id: string;
 	author?: string;
 	title: string;
 	image: string;

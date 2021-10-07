@@ -2,7 +2,6 @@ import React from 'react';
 import * as S from './Header.Elements';
 import Link from 'next/link';
 import { useRouter } from 'next/dist/client/router';
-import { testNews } from '../../data';
 
 const Header = () => {
 	const router = useRouter();

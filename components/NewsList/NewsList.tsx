@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import NewsCard from '../NewsCard/NewsCard';
-import { NewsProps } from '../../data';
+import { NewsProps } from '../../interfaces';
 
 const Wrapper = styled.section`
 	display: flex;
@@ -14,7 +14,7 @@ const NewsList: React.FC<NewsProps> = ({ news }) => {
 	return (
 		<Wrapper>
 			{news.map((data) => (
-				<NewsCard key={data.id} {...data} />
+				<NewsCard key={data._id} {...data} />
 			))}
 		</Wrapper>
 	);

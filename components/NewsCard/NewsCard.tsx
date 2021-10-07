@@ -1,13 +1,13 @@
 import React from 'react';
 import * as S from './NewsCard.Elements';
 import { useRouter } from 'next/dist/client/router';
-import { SingleNewsObjectProps } from '../../data';
+import { SingleNewsObjectProps } from '../../interfaces';
 
-const NewsCard: React.FC<SingleNewsObjectProps> = ({ id, title, image }) => {
+const NewsCard: React.FC<SingleNewsObjectProps> = ({ _id, title, image }) => {
 	const router = useRouter();
 
 	const showNewsDetails = () => {
-		router.push(`/news/${id}`);
+		router.push(`/news/${_id}`);
 	};
 
 	return (
