@@ -1,14 +1,10 @@
 import React from 'react';
 import * as S from './Header.Elements';
 import Link from 'next/link';
-import { useRouter } from 'next/dist/client/router';
-import { useGlobalContext, GlobalContextProps } from '../../contextAPI/globalContext';
+import { useSingleNewsContext } from '../../contextAPI/Context';
 
 const Header: React.FC = () => {
-	const { singleNewsContext } = useGlobalContext();
-	const router = useRouter();
-	const artId = router.query.newsId;
-	console.log(artId);
+	const { singleNewsContext } = useSingleNewsContext();
 
 	return (
 		<S.Wrapper>

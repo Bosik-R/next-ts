@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSingleNewsContext, initialSingleNewsObjectData } from '../../contextAPI/Context';
 import { SingleNewsObjectProps } from '../../interfaces';
 import * as S from './NewsDetailsCard.Elements';
 
@@ -7,6 +8,14 @@ interface Props {
 }
 const NewsDetailsCard: React.FC<Props> = ({ singleNews }) => {
 	const { title, image, description, url, author } = singleNews;
+	const { setSingleNewsContext } = useSingleNewsContext();
+
+	useEffect(() => {
+		setSingleNewsContext(singleNews);
+		return () => {
+			setSingleNewsContext(initialSingleNewsObjectData);
+		};
+	}, []);
 
 	return (
 		<S.Wrapper>

@@ -35,7 +35,6 @@ export const Navigation = styled.nav`
 
 export const HomeLink = styled.a`
 	margin-right: 0.75rem;
-	margin-bottom: 5px;
 
 	&:hover {
 		color: #00d70b;
@@ -43,7 +42,8 @@ export const HomeLink = styled.a`
 `;
 
 export const ChevronIcon = styled(ChevronRight)`
-	height: 1.2rem;
+	height: 1.5rem;
+	padding-top: 0.3rem;
 
 	@media (max-width: 430px) {
 		height: 1rem;
