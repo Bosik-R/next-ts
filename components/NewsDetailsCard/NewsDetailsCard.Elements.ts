@@ -1,6 +1,4 @@
-import styled from 'styled-components';
-import { ChevronDoubleRight } from '@styled-icons/bootstrap/ChevronDoubleRight';
-import { ChevronDoubleLeft } from '@styled-icons/bootstrap/ChevronDoubleLeft';
+import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.article`
 	max-width: 64rem;
@@ -32,15 +30,26 @@ export const ContentWrapper = styled.div`
 		align-items: center;
 	}
 `;
-export const ContentCard = styled.div`
-	max-width: 500px;
+
+const sharedWrapperStyles = css`
+	max-width: 31.25rem;
 	width: 100%;
-	margin-bottom: 1rem;
 	border-radius: 0.75rem;
 	overflow: hidden;
-	align-self: stretch;
 	box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.43);
+`;
+
+export const ImageWrapper = styled.div`
+	${sharedWrapperStyles};
 	font-size: 0; // set on parent element to fix the 4px gap between div and img that represents whitespace for img
+
+	@media (max-width: 768px) {
+		margin-bottom: 1rem;
+	}
+`;
+
+export const ContentCard = styled.div`
+	${sharedWrapperStyles}
 `;
 
 export const DetailsImage = styled.img`
@@ -54,35 +63,57 @@ export const Description = styled.p`
 	text-justify: inter-word;
 	padding: 1rem;
 	margin: 0;
-	font-size: 1rem;
 `;
 
-export const Author = styled.span`
-	margin-right: 1rem;
-`;
-
-export const LinkWrapper = styled.div`
-	display: flex;
-	align-items: center;
-	font-size: 1rem;
+export const Author = styled.p`
+	margin: 0;
 	padding: 1rem;
 `;
 
-export const IconLeft = styled(ChevronDoubleRight)`
-	height: 1rem;
-	color: #00ce00;
+export const LinksWrapper = styled.div`
+	display: flex;
+	align-items: space-around;
+	width: 100%;
+	padding: 1.5rem;
 `;
 
-export const IconRight = styled(ChevronDoubleLeft)`
-	height: 1rem;
-	color: #00ce00;
-`;
+const sharedLinkStyles = css`
+	position: relative;
+	padding: 0.4rem 1rem;
+	border-radius: 3rem;
+	border: 1px solid #000000;
+	background-color: transparent;
+	transition: color 300ms ease;
 
-export const Link = styled.a`
-	padding: 0 0.5rem 0.2rem 0.5rem;
-	text-align: center;
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: inherit;
+		background-color: #006400;
+		box-shadow: 0 0 1rem 0.125rem rgba(0, 100, 0, 1);
+		opacity: 0;
+		transition: opacity 500ms ease;
+		z-index: -1;
+	}
 
 	&:hover {
-		color: #00ce00;
+		color: #fff;
+
+		&::after {
+			opacity: 1;
+		}
 	}
+`;
+export const GoBackLink = styled.button`
+	${sharedLinkStyles}
+	margin-right: 1.5rem;
+	cursor: pointer;
+`;
+
+export const OryArtLink = styled.a`
+	${sharedLinkStyles}
 `;
