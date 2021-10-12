@@ -12,7 +12,7 @@ export const Wrapper = styled.article`
 export const Title = styled.h2`
 	padding: 0.7rem;
 	margin-bottom: 3rem;
-	border-bottom: 0.2rem solid #140051;
+	border-bottom: 0.2rem solid ${({ theme }) => theme.color.primary};
 
 	@media (max-width: 768px) {
 		font-size: 1.2rem;
@@ -36,7 +36,7 @@ const sharedWrapperStyles = css`
 	width: 100%;
 	border-radius: 0.75rem;
 	overflow: hidden;
-	box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.43);
+	box-shadow: ${({ theme }) => theme.boxShadowPrimary};
 `;
 
 export const ImageWrapper = styled.div`
@@ -81,9 +81,10 @@ const sharedLinkStyles = css`
 	position: relative;
 	padding: 0.4rem 1rem;
 	border-radius: 3rem;
-	border: 1px solid #000000;
+	border: 1px solid ${({ theme }) => theme.color.border};
 	background-color: transparent;
 	transition: color 300ms ease;
+	font-size: 1rem;
 
 	&::after {
 		content: '';
@@ -93,7 +94,7 @@ const sharedLinkStyles = css`
 		width: 100%;
 		height: 100%;
 		border-radius: inherit;
-		background-color: #006400;
+		background-color: ${({ theme }) => theme.color.buttonHover};
 		box-shadow: 0 0 1rem 0.125rem rgba(0, 100, 0, 1);
 		opacity: 0;
 		transition: opacity 500ms ease;
@@ -101,7 +102,7 @@ const sharedLinkStyles = css`
 	}
 
 	&:hover {
-		color: #fff;
+		color: ${({ theme }) => theme.color.fontLight};
 
 		&::after {
 			opacity: 1;

@@ -10,3 +10,8 @@ export interface SingleNewsObjectProps {
 export interface NewsProps {
 	news: Array<SingleNewsObjectProps>;
 }
+
+export interface GlobalContextProps {
+	singleNewsContext: SingleNewsObjectProps;
+	setSingleNewsContext: (data: SingleNewsObjectProps) => void;
+}

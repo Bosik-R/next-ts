@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './Header.Elements';
 import Link from 'next/link';
-import { useSingleNewsContext } from '../../contextAPI/Context';
+import { useSingleNewsContext } from '../../contextAPI/ContextProvider';
 
 const Header: React.FC = () => {
 	const { singleNewsContext } = useSingleNewsContext();

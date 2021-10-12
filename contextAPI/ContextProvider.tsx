@@ -1,10 +1,5 @@
-import { createContext, useContext, useState, Dispatch, SetStateAction } from 'react';
-import { SingleNewsObjectProps } from '../interfaces';
-
-export interface GlobalContextProps {
-	singleNewsContext: SingleNewsObjectProps;
-	setSingleNewsContext: (data: SingleNewsObjectProps) => void;
-}
+import { createContext, useContext, useState } from 'react';
+import { SingleNewsObjectProps, GlobalContextProps } from '../types/types';
 
 export const initialSingleNewsObjectData = {
 	_id: '',

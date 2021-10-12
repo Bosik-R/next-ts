@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './NewsCard.Elements';
 import { useRouter } from 'next/dist/client/router';
-import { SingleNewsObjectProps } from '../../interfaces';
+import { SingleNewsObjectProps } from '../../types/types';
 
 const NewsCard: React.FC<SingleNewsObjectProps> = ({ _id, title, image }) => {
 	const router = useRouter();

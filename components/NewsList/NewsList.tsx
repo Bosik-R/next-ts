@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import NewsCard from '../NewsCard/NewsCard';
-import { NewsProps } from '../../interfaces';
+import { NewsProps } from '../../types/types';
 
 const Wrapper = styled.section`
 	display: flex;

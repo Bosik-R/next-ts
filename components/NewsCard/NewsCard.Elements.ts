@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
 	background-color: ${({ theme }) => theme.color.fontLight};
 	cursor: pointer;
 	flex-shrink: 0;
-	box-shadow: ${({ theme }) => theme.boxShadowNewsCard};
+	box-shadow: ${({ theme }) => theme.boxShadowPrimary};
 
 	@media (max-width: 425) {
 		width: 90%;

@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import NewsList from '../components/NewsList/NewsList';
-import { NewsProps } from '../interfaces';
+import { NewsProps } from '../types/types';
 import { GetStaticProps } from 'next';
 import { MongoClient } from 'mongodb';
 

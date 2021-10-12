@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import NewsDetailsCard from '../../../components/NewsDetailsCard/NewsDetailsCard';
-import { SingleNewsObjectProps } from '../../../interfaces';
+import { SingleNewsObjectProps } from '../../../types/types';
 import { MongoClient, ObjectId } from 'mongodb';
 
 interface Props {

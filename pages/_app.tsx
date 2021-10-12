@@ -1,7 +1,6 @@
-import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Layout from '../components/Layout/Layout';
-import { SingleNewsProvider } from '../contextAPI/Context';
+import { SingleNewsProvider } from '../contextAPI/ContextProvider';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
