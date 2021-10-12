@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import * as S from './Header.Elements';
 import Link from 'next/link';
 import { useSingleNewsContext } from '../../contextAPI/ContextProvider';
@@ -8,13 +8,20 @@ const Header: React.FC = () => {
 
 	return (
 		<S.Wrapper>
-			<S.Title>DevNews the best source of information</S.Title>
+			<S.TitleWrapper>
+				<S.Title>DevNews</S.Title>
+				<S.Description>the best source of information</S.Description>
+			</S.TitleWrapper>
 			<S.Navigation>
 				<Link href='/' passHref>
 					<S.HomeLink>News</S.HomeLink>
 				</Link>
-				<S.ChevronIcon />
-				<S.ArticleTitle>{singleNewsContext.title}</S.ArticleTitle>
+				{singleNewsContext.title.length > 0 && (
+					<Fragment>
+						<S.ChevronIcon />
+						<S.ArticleTitle>{singleNewsContext.title}</S.ArticleTitle>
+					</Fragment>
+				)}
 			</S.Navigation>
 		</S.Wrapper>
 	);
