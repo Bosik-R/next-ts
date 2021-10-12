@@ -10,10 +10,10 @@ export const Wrapper = styled.div`
 	align-items: center;
 	border: none;
 	border-radius: 1rem;
-	background-color: #ffffff;
+	background-color: ${({ theme }) => theme.color.fontLight};
 	cursor: pointer;
 	flex-shrink: 0;
-	box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.43);
+	box-shadow: ${({ theme }) => theme.boxShadowNewsCard};
 
 	@media (max-width: 425) {
 		width: 90%;

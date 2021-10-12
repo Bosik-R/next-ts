@@ -3,8 +3,8 @@ import { ChevronRight } from '@styled-icons/bootstrap/ChevronRight';
 
 export const Wrapper = styled.header`
 	padding: 1rem 2rem;
-	background-color: #140051;
-	color: #ffffff;
+	background-color: ${({ theme }) => theme.color.primary};
+	color: ${({ theme }) => theme.color.fontLight};
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
@@ -37,7 +37,7 @@ export const HomeLink = styled.a`
 	margin-right: 0.75rem;
 
 	&:hover {
-		color: #00d70b;
+		color: ${({ theme }) => theme.color.homeLinkHover};
 	}
 `;
 
