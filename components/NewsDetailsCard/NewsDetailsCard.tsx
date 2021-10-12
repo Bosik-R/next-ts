@@ -35,7 +35,9 @@ const NewsDetailsCard: React.FC<Props> = ({ singleNews }) => {
 						<Link href='/' passHref>
 							<S.GoBackLink>Go Back</S.GoBackLink>
 						</Link>
-						<S.OryArtLink href={url}>original article</S.OryArtLink>
+						<S.OryArtLink href={url} target='_blank'>
+							original article
+						</S.OryArtLink>
 					</S.LinksWrapper>
 				</S.ContentCard>
 			</S.ContentWrapper>

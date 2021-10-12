@@ -8,12 +8,12 @@ export const Wrapper = styled.div`
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
+	flex-shrink: 0;
 	border: none;
 	border-radius: 1rem;
 	background-color: ${({ theme }) => theme.color.fontLight};
-	cursor: pointer;
-	flex-shrink: 0;
 	box-shadow: ${({ theme }) => theme.boxShadowPrimary};
+	cursor: pointer;
 
 	@media (max-width: 425) {
 		width: 90%;

@@ -8,6 +8,10 @@ export const Wrapper = styled.header`
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
+
+	@media (max-width: 1024px) {
+		padding: 1rem;
+	}
 `;
 
 export const Title = styled.h1`
@@ -35,6 +39,10 @@ export const Navigation = styled.nav`
 
 export const HomeLink = styled.a`
 	margin-right: 0.75rem;
+
+	@media (min-width: 1030px) {
+		margin-left: 2rem;
+	}
 
 	&:hover {
 		color: ${({ theme }) => theme.color.homeLinkHover};
