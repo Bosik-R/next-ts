@@ -11,9 +11,9 @@ type Props = { children: React.ReactNode };
 const Layout: React.FC<Props> = ({ children }) => {
 	return (
 		<ThemeProvider theme={theme}>
+			<HeadContent />
 			<S.Wrapper>
 				<GlobalStyles />
-				<HeadContent />
 				<Header />
 				<S.Content>{children}</S.Content>
 			</S.Wrapper>

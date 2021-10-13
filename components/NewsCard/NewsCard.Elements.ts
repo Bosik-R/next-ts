@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
 	width: 18rem;
-	height: 21rem;
+	height: 18rem;
 	padding: 1rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: space-between;
 	align-items: center;
 	flex-shrink: 0;
 	border: none;
@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
 
 export const Title = styled.p`
 	font-size: 1.2rem;
-	height: 5rem;
+	margin: 0;
 
 	@media (max-width: 430px) {
 		font-size: 1rem;
@@ -33,7 +33,6 @@ export const ImageWrapper = styled.div`
 	width: 100%;
 	height: 10rem;
 	overflow: hidden;
-	margin-bottom: 1rem;
 	border-radius: 1rem;
 `;
 

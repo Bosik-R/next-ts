@@ -9,10 +9,12 @@ const Header: React.FC = () => {
 	return (
 		<S.Wrapper>
 			<S.TitleWrapper>
-				<S.Title>DevNews</S.Title>
+				<S.TitleShape>
+					<S.Title>DevNews</S.Title>
+				</S.TitleShape>
 				<S.Description>the best source of information</S.Description>
 			</S.TitleWrapper>
-			<S.Navigation>
+			<S.Breadcrumbs>
 				<Link href='/' passHref>
 					<S.HomeLink>News</S.HomeLink>
 				</Link>
@@ -22,7 +24,7 @@ const Header: React.FC = () => {
 						<S.ArticleTitle>{singleNewsContext.title}</S.ArticleTitle>
 					</Fragment>
 				)}
-			</S.Navigation>
+			</S.Breadcrumbs>
 		</S.Wrapper>
 	);
 };
