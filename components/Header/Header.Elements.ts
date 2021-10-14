@@ -82,7 +82,8 @@ export const Description = styled.span`
 `;
 
 export const Breadcrumbs = styled.nav`
-	width: 85%;
+	max-width: 79rem;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	font-size: 1.5rem;

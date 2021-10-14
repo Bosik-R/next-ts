@@ -1,12 +1,13 @@
 import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.article`
-	max-width: 64rem;
+	max-width: 65rem;
 	width: 100%;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 0 0.7rem;
 `;
 
 export const Title = styled.h2`
@@ -75,6 +76,11 @@ export const LinksWrapper = styled.div`
 	align-items: space-around;
 	width: 100%;
 	padding: 1.5rem;
+
+	@media (max-width: 430px) {
+		flex-direction: column;
+		align-items: center;
+	}
 `;
 
 const sharedLinkStyles = css`
@@ -85,6 +91,11 @@ const sharedLinkStyles = css`
 	background-color: transparent;
 	transition: color 300ms ease;
 	font-size: 1rem;
+
+	@media (max-width: 430px) {
+		width: 8.75rem;
+		text-align: center;
+	}
 
 	&::after {
 		content: '';
@@ -113,6 +124,11 @@ export const GoBackLink = styled.button`
 	${sharedLinkStyles}
 	margin-right: 1.5rem;
 	cursor: pointer;
+
+	@media (max-width: 430px) {
+		margin: 0;
+		margin-bottom: 1rem;
+	}
 `;
 
 export const OryArtLink = styled.a`

@@ -6,7 +6,8 @@ export const Wrapper = styled.div`
 `;
 
 export const Content = styled.div`
-	width: 90%;
+	max-width: 79rem;
+	width: 100%;
 	margin: 0 auto;
 	padding-top: 2rem;
 `;
